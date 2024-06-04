@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root{ 
+    /* light mode var */
+    --background-color-light: hsl(0, 0%, 98%);
+    --text-color-light: hsl(207, 26%, 17%);
+    --element-color-light: hsl(0, 0%, 100%);
+    
+    /* dark mode var */
+    --background-color-dark: hsl(207, 26%, 17%);
+    --text-color-dark: hsl(0, 0%, 100%);
+    --element-color-dark: hsl(209, 23%, 22%);
+
+    --input-color: hsl(0, 0%, 52%);
+}
+
+*{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5, h6{
+    margin: 0;
+}
+p{
+    margin: 5px 0;
+}
+
+body{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+main, header{
+    padding: 15px 7%;
+}
+
+header{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--element-color);
+    box-shadow: 0 1px 10px rgba(0,0,0, .1);
+}
+.theme-toggler-box{
+    padding: 2px;
+    display: inline-block;
+    cursor:pointer !important;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .navbar-brand{
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.navbar > span {
+    cursor: pointer;
+}
+
+.navbar > a, .navbar > span {
+    color: inherit;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.main{
+    position: relative;
+    z-index: 0;
+    padding-top: 102px;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 991px){
+    
+}
+
+@media only screen and (max-width: 767px){
+    .navbar .navbar-brand{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 575px){
+    .navbar .navbar-brand{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    
+}
+
+/* system setting */
+@media(prefers-color-scheme: dark) {
+    :root{
+        --background-color: var(--background-color-dark);
+        --text-color: var(--text-color-dark);
+        --element-color: var(--element-color-dark);
+    }
+}
+
+@media(prefers-color-scheme: light) {
+    :root{
+        --background-color: var(--background-color-light);
+        --text-color: var(--text-color-light);
+        --element-color: var(--element-color-light);
+    }
+}
+
+/* custom setting */
+[color-scheme="dark"]{
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+    --element-color: var(--element-color-dark);
+}
+
+[color-scheme="light"]{
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+    --element-color: var(--element-color-light);
+}

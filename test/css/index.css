@@ -1,0 +1,135 @@
+body{
+    font-size: 14px;
+}
+
+.main > .filtering{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main > .filtering input, .main > .filtering select{
+    padding: 15px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 3px rgba(0,0,0, .1);
+}
+
+.main > .filtering select{
+    color: var(--text-color);
+    background-color: var(--element-color);
+}
+.search-icon{
+    position: absolute;
+    top: 15px;
+    left: 34px;
+}
+.main > .filtering .search-cont{
+    flex-basis: 400px;
+    position: relative;
+}
+
+.main > .filtering input{
+    padding-left: 75px ;
+    width: 100%;
+    color: var(--text-color);
+    background-color: var(--element-color);
+    /* padd */
+}
+
+.main > .filtering input::placeholder{
+    color: var(--text-color);
+}
+.country-cont{
+    padding-top: 40px;
+    width: 100%;
+    display: grid;
+    row-gap: 60px;
+    column-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+
+}
+
+.country-card{
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: var(--element-color);
+    box-shadow: 0 0 5px rgba(0,0,0, .1);
+}
+.country-card a{
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+}
+.country-card .card-body{
+    padding: 15px 20px 33px;
+}
+.country-card .card-head img{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    width: 100%;
+    height: 182px;
+    object-fit: cover;
+}
+
+.country-card .card-body .title{
+    font-weight: 800;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.country-card .card-body > p{
+    color: var(--input-color);
+}
+
+.country-card .card-body > p > span{
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+@media only screen and (max-width: 991px){
+    .country-cont{
+        row-gap: 60px;
+        column-gap: 50px;
+        grid-template-columns: repeat(3, 1fr);
+    
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .country-cont{
+        row-gap: 50px;
+        column-gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
+
+    .main > .filtering{
+        justify-content: unset;
+        align-items: unset;
+        flex-flow: column wrap;
+        row-gap: 50px;
+    }
+    .main > .filtering .search-cont{
+        flex-basis: unset;
+    }
+
+    .main > .filtering select{
+        width: 50% !important;
+    }
+}
+
+@media only screen and (max-width: 575px){
+    .country-cont{
+        row-gap: 40px;
+        column-gap: 30px;
+        grid-template-columns: 1fr;
+    
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    
+}

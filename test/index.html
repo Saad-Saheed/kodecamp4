@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countries</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand">Where in the world?</a>
+            <span class="theme-toggler-box" onclick="changeTheme()">
+                <!-- <input class="theme-control-toggle-input" onclick="changeTheme()" id="themeControlToggle" type="checkbox">
+                <label for="themeControlToggle"> -->
+                    <i class="fa-regular fa-moon" style="margin-right: 5px;"></i> <span id="themeText">Dark Mode</span>
+                <!-- </label> -->
+            </span>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="filtering">
+            <div class="search-cont">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="search-icon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg> -->
+                <input type="search" id="search" oninput="getCountries()" placeholder="search for a country...">
+            </div>
+
+            <select name="filter" id="filter" onchange="getCountries()">
+                <option value="">Filter by Region</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Antarctic">Antarctic</option>
+                <option value="Antarctic Ocean">Antarctic Ocean</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+                <option value="Polar">Polar</option>
+            </select>
+
+        </section>
+
+        <section class="country-cont" id="country-cont">
+
+        </section>
+    </main>
+
+
+    <script src="./js/index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            loadTheme(getCurrentTheme());
+            getCountries();
+        });
+    </script>
+</body>
+
+</html>

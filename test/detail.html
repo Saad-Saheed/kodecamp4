@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>country details</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/detail.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand">Where in the world?</a>
+            <span class="theme-toggler-box" onclick="changeTheme()">
+                <!-- <input class="theme-control-toggle-input" onclick="changeTheme()" id="themeControlToggle" type="checkbox">
+                <label for="themeControlToggle"> -->
+                    <i class="fa-regular fa-moon" style="margin-right: 5px;"></i> <span id="themeText">Dark Mode</span>
+                <!-- </label> -->
+            </span>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="navigator">
+            <a href="./index.html"><i class="fa-solid fa-arrow-left" style="margin-right: 10px;"></i> Back</a>
+        </section>
+
+        <section class="country-card" id="country-card">
+           
+        </section>
+    </main>
+
+    <script src="./js/index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{        
+            loadTheme(getCurrentTheme());
+            getCountry();
+        });
+    </script>
+</body>
+
+</html>
