@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Saad-Saheed/kodecamp4/tree/main/test)
-- Live Site URL: [Add live site URL here](https://kodecamp4test.vercel.app)
+- Solution URL: [Git Hub URL](https://github.com/Saad-Saheed/kodecamp4/tree/main/test)
+- Live Site URL: [live site URL](https://kodecamp4test.vercel.app)
 
 ## My process
 
